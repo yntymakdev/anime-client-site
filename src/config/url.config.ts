@@ -1,4 +1,4 @@
-export const APP_URL = `${process.env.SERVER_URL}/api` as string;
+export const APP_URL = process.env.SERVER_URL as string;
 
 export const PUBLIC_URL = {
   root: (url = "") => `${url ? url : ""}`,
