@@ -11,5 +11,22 @@ export const PUBLIC_URL = {
   movie: (slug = "") => PUBLIC_URL.root(`/movie/${slug}`),
   premium: () => PUBLIC_URL.root("/premium"),
 };
-export const DASHBOARD_URL = {};
-export const ADMIN_URL = {};
+export const DASHBOARD_URL = {
+  root: (url = "") => `dashboard${url ? "/" + url : ""}`,
+  home: () => DASHBOARD_URL.root(),
+  favorites: () => DASHBOARD_URL.root("/favorites"),
+};
+export const ADMIN_URL = {
+  root: (url = "") => `/manage${url ? "/" + url : ""}`,
+  home: () => ADMIN_URL.root("/"),
+  users: () => ADMIN_URL.root("users"),
+  userEdit: (id = "") => ADMIN_URL.root(`users/${id}`),
+  movie: () => ADMIN_URL.root("movie"),
+  movieEdit: (id = "") => ADMIN_URL.root(`movies/${id}`),
+  genres: () => ADMIN_URL.root("genres"),
+  genreEdit: (id = "") => ADMIN_URL.root(`genreEdits/${id}`),
+  actors: () => ADMIN_URL.root("actors"),
+  actorEdit: (id = "") => ADMIN_URL.root(`actorEdits/${id}`),
+  payments: () => ADMIN_URL.root("payments"),
+  reviews: () => ADMIN_URL.root("reviews"),
+};
