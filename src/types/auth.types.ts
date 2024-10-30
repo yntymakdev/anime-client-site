@@ -6,8 +6,10 @@ export interface IAuthForm {
   password: string;
 }
 
-export interface iAuthResponse {
-  user: IUser;
+export interface ITokens {
   accessToken: string;
   refreshToken: string;
+}
+export interface iAuthResponse extends ITokens {
+  user: IUser;
 }
