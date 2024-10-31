@@ -10,6 +10,6 @@ export interface ITokens {
   accessToken: string;
   refreshToken: string;
 }
-export interface iAuthResponse extends ITokens {
+export interface IAuthResponse extends ITokens {
   user: IUser;
 }
