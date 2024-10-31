@@ -1,6 +1,6 @@
 import { axiosClassic, axiosWithAuth } from "@/api/interceptors";
 import { API_URL } from "@/config/api.config";
-import { IActor } from "@/types/actor.types";
+import { IActor, IActorEditInput } from "@/types/actor.types";
 
 class ActorService {
   async getAll(searchTerm?: string) {
@@ -33,3 +33,4 @@ class ActorService {
     return axiosWithAuth.delete<string>(API_URL.actors(`/${id}`));
   }
 }
+export const actorService = new ActorService();
