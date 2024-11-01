@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -39,16 +40,16 @@ module.exports = {
             transform: "scale(1)",
           },
         },
-        fontFamily: {
-          sans: ["var(--font-geist-sans)"],
-          moho: ["var(--font-geist-mono)"],
-        },
-        animation: {
-          fade: "fade 5s ease-in-out",
-          scaleIn: "scaleIn 35s ease-in-out",
-        },
+      },
+      fontFamily: {
+        sans: ["var(--font-geist-sans)"],
+        mono: ["var(--font-geist-mono)"],
+      },
+      animation: {
+        fade: "fade .5s ease-in-out",
+        scaleIn: "scaleIn .35s ease-in-out",
       },
     },
-    plugins: [],
   },
+  plugins: [],
 };
