@@ -14,8 +14,8 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import Providers from "./providers";
-import { SITE_DESCRIPTION, SITE_NAME } from "./constants/seo.constants";
 import { APP_URL } from "@/config/url.config";
+import { SITE_DESCRIPTION, SITE_NAME } from "@/constants/seo.constants";
 
 export const metadata: Metadata = {
   title: {
