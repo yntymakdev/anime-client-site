@@ -1,7 +1,9 @@
-import React, { FC, PropsWithChildren } from "react";
+import Home from "./Home";
 
-const Layout: FC<PropsWithChildren<unknown>> = ({ children }) => {
-  return <div>{children} </div>;
-};
-
-export default Layout;
+export default function HomePage() {
+  return (
+    <div>
+      <Home />
+    </div>
+  );
+}
