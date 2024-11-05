@@ -1,23 +1,59 @@
-.wrapper {
-  @apply min-h-screen grid grid-cols-1 lg:grid-cols-2;
+// .wrapper {
+//   @apply min-h-screen grid grid-cols-1 lg:grid-cols-2;
 
-  > .left {
-    @apply h-full lg:flex flex-col items-center justify-center px-4;
+//   > .left {
+//     @apply h-full lg:flex flex-col items-center justify-center px-4;
 
-    > .heading {
-      @apply text-3xl mb-6;
-    }
+//     > .heading {
+//       @apply text-3xl mb-6;
+//     }
 
-    .button {
-      @apply mt-4 w-full;
-    }
+//     .button {
+//       @apply mt-4 w-full;
+//     }
 
-    .toggle {
-      @apply mt-3;
-    }
+//     .toggle {
+//       @apply mt-3;
+//     }
+//   }
+
+//   > .right {
+//     @apply h-full bg-primary hidden lg:flex items-center justify-center;
+//   }
+// }
+.head {
+  h1 {
+    background: linear-gradient(
+      90deg,
+      #ff0000,
+      #ffff00,
+      #ff00f3,
+      #0033ff,
+      #ff00c4,
+      #ff0000
+    );
+    background-size: 400%;
+    font-size: 30px;
+    font-weight: 600;
+    word-spacing: 5px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
   }
 
-  > .right {
-    @apply h-full bg-primary hidden lg:flex items-center justify-center;
+  100% {
+    background-position: 400%;
   }
+}
+.image {
+  position: relative;
+  background: url("./image/Фон.png");
+  height: 500px; /* Высота контейнера */
+  width: 100%; /* Ширина контейнера */
+  overflow: hidden; /* Скрываем переполнение */
 }

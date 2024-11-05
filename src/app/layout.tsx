@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 // });
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import "./globals.css";
+import "./globals.scss";
 import Providers from "./providers";
 import { APP_URL } from "@/config/url.config";
 import { SITE_DESCRIPTION, SITE_NAME } from "@/constants/seo.constants";
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
-    emails: ["info@yumestories.com"],
+    emails: ["info@yumedream.com"],
   },
 };
 

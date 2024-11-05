@@ -40,3 +40,11 @@ a {
     color-scheme: dark;
   }
 }
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1280px;
+  // margin-inline: auto;
+  padding: 20px;
+}
