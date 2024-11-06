@@ -5,12 +5,11 @@ import { FC, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 import Heading from "@/components/ui/heading/Heading";
-
+import Field from "@/components/ui/form-elements/field/Field"; // Убедитесь, что этот компонент доступен
 import { IAuthForm } from "@/types/auth.types";
-
+import { validEmail } from "./valid-email";
 import styles from "./Auth.module.scss";
 import { useAuthMutation } from "./useAuthMutation";
-// import { useAuthMutation } from "./useAuthMutation";
 
 const Auth: FC = () => {
   const {
@@ -23,7 +22,6 @@ const Auth: FC = () => {
   });
 
   const [isLoginForm, setIsLoginForm] = useState(true);
-
   const { mutate } = useAuthMutation(isLoginForm, reset);
 
   const onSubmit: SubmitHandler<IAuthForm> = (data) => {
@@ -32,38 +30,71 @@ const Auth: FC = () => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.left}>
-        <Heading className={styles.heading}>
-          {isLoginForm ? "Войти в аккаунт" : "Регистрация"}
-        </Heading>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <input
-            register={register}
-            errors={errors}
-            isLoginForm={isLoginForm}
-          />
-          <button className={styles.button}>
-            {isLoginForm ? "Войти" : "Создать аккаунт"}
-          </button>
-          <div className={styles.toggle}>
-            {isLoginForm ? "Еще нет аккаунта? " : "Уже есть аккаунт? "}
-            <button
-              type="button"
-              onClick={() => setIsLoginForm(isLoginForm ? false : true)}
-              className="text-primary"
-            >
-              {isLoginForm ? "Создать аккаунт" : "Войти в аккаунт"}
+      <div className="container">
+        <div className={styles.left}>
+          <Heading className={styles.heading}>
+            {isLoginForm ? "Войти в аккаунт" : "Регистрация"}
+          </Heading>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            {!isLoginForm && (
+              <Field
+                {...register("name", {
+                  required: "Имя обязательно",
+                  minLength: {
+                    value: 1,
+                    message: "Пожалуйста введите имя",
+                  },
+                })}
+                placeholder="Имя"
+                error={errors.name}
+              />
+            )}
+            <Field
+              {...register("email", {
+                required: "Email обязателен",
+                pattern: {
+                  value: validEmail,
+                  message: "Пожалуйста введите корректный email",
+                },
+              })}
+              placeholder="Email"
+              error={errors.email}
+            />
+            <Field
+              {...register("password", {
+                required: "Пароль обязателен",
+                minLength: {
+                  value: 6,
+                  message: "Пароль должен содержать 6 символов",
+                },
+              })}
+              type="password"
+              placeholder="Пароль"
+              error={errors.password}
+            />
+            <button className={styles.button}>
+              {isLoginForm ? "Войти" : "Создать аккаунт"}
             </button>
-          </div>
-        </form>
-      </div>
-      <div className={styles.right}>
-        {/* <Image
+            <div className={styles.toggle}>
+              {isLoginForm ? "Еще нет аккаунта? " : "Уже есть аккаунт? "}
+              <button
+                type="button"
+                onClick={() => setIsLoginForm((prev) => !prev)}
+                className="text-primary"
+              >
+                {isLoginForm ? "Создать аккаунт" : "Войти в аккаунт"}
+              </button>
+            </div>
+          </form>
+        </div>
+        <div className={styles.right}>
+          {/* <Image
           src="/images/auth.svg"
           height={150}
           width={150}
           alt="Авторизация"
         /> */}
+        </div>
       </div>
     </div>
   );
