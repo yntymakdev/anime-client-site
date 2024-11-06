@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FC, PropsWithChildren } from "react";
 
-const layout = () => {
-  return <div>layout</div>;
+const Layout: FC<PropsWithChildren<unknown>> = ({ children }) => {
+  return <div>{children}</div>;
 };
 
-export default layout;
+export default Layout;
