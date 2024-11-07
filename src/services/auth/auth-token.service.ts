@@ -1,4 +1,4 @@
-import { iAuthResponse, ITokens } from "@/types/auth.types";
+import { IAuthResponse, ITokens } from "@/types/auth.types";
 import Cookies from "js-cookie";
 
 export enum EnumTokens {
@@ -29,7 +29,7 @@ export const removeFromStorage = () => {
   Cookies.remove(EnumTokens.REFRESH_TOKEN);
 };
 
-export const saveToStorage = (data: iAuthResponse) => {
+export const saveToStorage = (data: IAuthResponse) => {
   saveTokensStorage(data);
   localStorage.setItem("user", JSON.stringify(data.user));
 };
