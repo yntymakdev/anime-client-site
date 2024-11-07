@@ -1,5 +1,6 @@
-import { IAuthResponse, ITokens } from "@/types/auth.types";
 import Cookies from "js-cookie";
+
+import { IAuthResponse, ITokens } from "../../types/auth.types";
 
 export enum EnumTokens {
   "ACCESS_TOKEN" = "accessToken",
