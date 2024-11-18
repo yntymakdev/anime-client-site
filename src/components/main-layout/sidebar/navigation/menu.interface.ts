@@ -1,4 +1,4 @@
-import { TypeIconName } from "@/components/ui/icon";
+import { TypeIconName } from "@/components/ui/Icon";
 
 export interface IMenuItem {
   icon: TypeIconName;
@@ -8,5 +8,5 @@ export interface IMenuItem {
 
 export interface IMenu {
   title: string;
-  items: IMenuItem;
+  items: IMenuItem[];
 }
