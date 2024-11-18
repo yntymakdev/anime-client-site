@@ -1,4 +1,5 @@
 import { ADMIN_URL, PUBLIC_URL } from "@/config/url.config";
+
 import { IMenu } from "./menu.interface";
 
 export const userMenu: IMenu = {

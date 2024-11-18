@@ -2,7 +2,7 @@ import { FC, PropsWithChildren } from "react";
 
 import styles from "./MainLayout.module.scss";
 import Header from "./header/Header";
-import Sidebar from "./sidebar/SideBar";
+import Sidebar from "./sidebar/Sidebar";
 
 const MainLayout: FC<PropsWithChildren<unknown>> = ({ children }) => {
   return (
