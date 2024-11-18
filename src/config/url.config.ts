@@ -21,7 +21,7 @@ export const ADMIN_URL = {
   home: () => ADMIN_URL.root("/"),
   users: () => ADMIN_URL.root("users"),
   userEdit: (id = "") => ADMIN_URL.root(`users/${id}`),
-  movie: () => ADMIN_URL.root("movie"),
+  movies: () => ADMIN_URL.root("movies"),
   movieEdit: (id = "") => ADMIN_URL.root(`movies/${id}`),
   genres: () => ADMIN_URL.root("genres"),
   genreEdit: (id = "") => ADMIN_URL.root(`genreEdits/${id}`),

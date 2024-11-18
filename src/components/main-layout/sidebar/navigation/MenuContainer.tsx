@@ -6,8 +6,8 @@ import { FC } from "react";
 import { ADMIN_URL } from "@/config/url.config";
 
 import Menu from "./Menu";
-import GenreMenu from "./genre-menu/GenreMenu";
 import { adminMenu, userMenu } from "./menu.data";
+import GenreMenu from "./genre-menu/GenreMenu";
 
 const MenuContainer: FC = () => {
   const pathname = usePathname();
