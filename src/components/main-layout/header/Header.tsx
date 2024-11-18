@@ -1,8 +1,8 @@
 import { FC } from "react";
 
 import styles from "./Header.module.scss";
-import Search from "./search/Search";
 import UserMenu from "./user-menu/UserMenu";
+import Search from "./search/Search";
 
 const Header: FC = () => {
   return (
