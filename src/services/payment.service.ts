@@ -6,19 +6,19 @@ import { IPayment, IPaymentResponse } from "@/types/payment.types";
 
 class PaymentService {
   async getAll() {
-    const { data } = await axiosWithAuth.get<IPayment[]>(API_URL.payments(""));
+    const { data } = await axiosWithAuth.get<IPayment[]>(API_URL.payment(""));
 
     return data;
   }
 
   async checkout(amount: number) {
-    return axiosWithAuth.post<IPaymentResponse>(API_URL.payments(""), {
+    return axiosWithAuth.post<IPaymentResponse>(API_URL.payment(""), {
       amount,
     });
   }
 
   async delete(id: string) {
-    return axiosWithAuth.delete<string>(API_URL.payments(`/${id}`));
+    return axiosWithAuth.delete<string>(API_URL.payment(`/${id}`));
   }
 }
 

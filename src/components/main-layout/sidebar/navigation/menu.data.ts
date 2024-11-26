@@ -6,17 +6,17 @@ export const userMenu: IMenu = {
   title: "Меню",
   items: [
     {
-      icon: "LuCompass",
+      // icon: "LuCompass",
       link: PUBLIC_URL.home(),
       value: "Главная",
     },
     {
-      icon: "LuClapperboard",
+      // icon: "LuClapperboard",
       link: PUBLIC_URL.explorer(),
       value: "Фильмы",
     },
     {
-      icon: "LuFlame",
+      // icon: "LuFlame",
       link: PUBLIC_URL.trending(),
       value: "Популярные",
     },
@@ -27,38 +27,38 @@ export const adminMenu: IMenu = {
   title: "Меню",
   items: [
     {
-      icon: "LuLayoutDashboard",
+      // icon: "LuLayoutDashboard",
       link: ADMIN_URL.root(),
       value: "Статистика",
     },
     {
-      icon: "LuUsers",
+      // icon: "LuUsers",
       link: ADMIN_URL.users(),
       value: "Пользователи",
     },
     {
-      icon: "LuTv",
+      // icon: "LuTv",
       link: ADMIN_URL.movies(),
       value: "Фильмы",
     },
     {
-      icon: "LuBook",
+      // icon: "LuBook",
       link: ADMIN_URL.genres(),
       value: "Жанры",
     },
     {
-      icon: "LuBookDown",
+      // icon: "LuBookDown",
       link: ADMIN_URL.actors(),
       value: "Актеры",
     },
     {
-      icon: "LuStar",
+      // icon: "LuStar",
       link: ADMIN_URL.reviews(),
       value: "Отзывы",
     },
     {
-      icon: "LuRussianRuble",
-      link: ADMIN_URL.payments(),
+      // icon: "LuRussianRuble",
+      link: ADMIN_URL.payment(),
       value: "Платежи",
     },
   ],

@@ -16,7 +16,7 @@ import { useProfile } from "@/hooks/useProfile";
 
 import { paymentService } from "@/services/payment.service";
 
-import { convertPrice } from "@/utils/string/convertPrice";
+import { convertPrice } from "@/utils/string/ConvertPrice";
 
 import styles from "./Premium.module.scss";
 

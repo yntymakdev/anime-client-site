@@ -1,7 +1,7 @@
-import { TypeIconName } from "@/components/ui/Icon";
+// import { TypeIconName } from "@/components/ui/Icon";
 
 export interface IMenuItem {
-  icon: TypeIconName;
+  // icon: TypeIconName;
   value: string;
   link: string;
 }

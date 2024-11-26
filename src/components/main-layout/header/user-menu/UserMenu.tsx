@@ -7,7 +7,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { LuLoader } from "react-icons/lu";
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
 
-import { Icon } from "@/components/ui/Icon";
+// import { Icon } from "@/components/ui/Icon";
 import Button from "@/components/ui/form-elements/button/Button";
 
 import { ADMIN_URL, DASHBOARD_URL, PUBLIC_URL } from "@/config/url.config";
@@ -48,7 +48,7 @@ const UserMenu: FC = () => {
       ) : (
         <Link href={PUBLIC_URL.auth()}>
           <Button variant="outline" className="px-4">
-            <Icon name="LuLogOut" className="size-4 mr-2" />
+            {/* <Icon name="LuLogOut" className="size-4 mr-2" /> */}
             Войти
           </Button>
         </Link>

@@ -1,6 +1,6 @@
 import { ChangeEvent, FC } from "react";
 
-import { Icon } from "../Icon";
+// import { Icon } from "../Icon";
 
 import styles from "./SearchField.module.scss";
 
@@ -12,7 +12,7 @@ interface ISearchField {
 const SearchField: FC<ISearchField> = ({ searchTerm, handleSearch }) => {
   return (
     <label className={styles.search}>
-      <Icon name="LuSearch" className={styles.icon} />
+      {/* <Icon name="LuSearch" className={styles.icon} /> */}
       <input
         type="text"
         placeholder="Поиск..."
