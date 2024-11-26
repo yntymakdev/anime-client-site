@@ -11,5 +11,5 @@ export const API_URL = {
   reviews: (url = "") => API_URL.root(`/reviews${url}`),
   files: (url = "") => API_URL.root(`/files${url}`),
   statistics: (url = "") => API_URL.root(`/statistics${url}`),
-  payments: (url = "") => API_URL.root(`/payments${url}`),
+  payment: (url = "") => API_URL.root(`/payments${url}`),
 };

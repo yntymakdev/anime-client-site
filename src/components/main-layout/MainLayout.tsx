@@ -1,13 +1,17 @@
-import React, { FC, PropsWithChildren } from "react";
-import s from "./MainLayout.module.scss";
+import { FC, PropsWithChildren } from "react";
+
+import styles from "./MainLayout.module.scss";
 import Header from "./header/Header";
-import SideBar from "./sidebar/SideBar";
+import Sidebar from "./sidebar/Sidebar";
+
 const MainLayout: FC<PropsWithChildren<unknown>> = ({ children }) => {
   return (
-    <div>
-      <Header />
-      <SideBar />
-      <main>{children}</main>
+    <div className={styles.layout}>
+      <div className="flex-1">
+        <Header />
+        <Sidebar />
+        <main>{children}</main>
+      </div>
     </div>
   );
 };
